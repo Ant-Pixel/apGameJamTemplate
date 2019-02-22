@@ -1,5 +1,4 @@
-module.exports = (game) => {
-
+module.exports = (game, config) => {
     const state = {};
     state.create = () => {
         //Initial GameSystem (Arcade, P2, Ninja)
@@ -8,7 +7,6 @@ module.exports = (game) => {
         //Initial Load State
         game.state.start('load');
     };
-
 
     return state;
 }

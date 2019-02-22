@@ -1,6 +1,6 @@
-const loadState = {
-
-    preload: () => {
+module.exports = (game, config) => {
+    const state = {};
+    state.preload = () => {
 
         /*
         Load all game assets
@@ -25,12 +25,13 @@ const loadState = {
         //Load your data, JSON, Querys...
         //Example: game.load.json('version', 'http://phaser.io/version.json');
 
-    },
-
-    create: ()  => {
+    }
+    state.create = ()  => {
 
         game.stage.setBackgroundColor('#000');
         game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
-        game.state.start('menu');
-    }
+        game.state.start(config.default.states.menu.name);
+    };
+
+    return state;
 };
