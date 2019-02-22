@@ -1,22 +1,32 @@
 {
-  "name": "apgamejamtemplate",
+  "name": "eansphaserboilerplate",
   "version": "1.0.0",
-  "description": "A template for making phaser games",
+  "description": "A boiler plate for running phaser games",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+      "start": "brunch watch --server",
+      "build": "brunch build --production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ant-Pixel/apGameJamTemplate.git"
+    "url": "git+https://github.com/E-A-N/eansPhaserBoilerPlate.git"
   },
-  "author": "Ant Pixel",
+  "author": "Ean Moore",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ant-Pixel/apGameJamTemplate/issues"
+    "url": "https://github.com/E-A-N/eansPhaserBoilerPlate/issues"
   },
-  "homepage": "https://github.com/Ant-Pixel/apGameJamTemplate#readme",
+  "homepage": "https://github.com/E-A-N/eansPhaserBoilerPlate#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "phaser-ce": "^2"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "~6.0",
+    "babel-preset-latest": "^6",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "uglify-js-brunch": "^2"
   }
 }

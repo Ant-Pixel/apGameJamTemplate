@@ -19,9 +19,16 @@
 - On the command line navigate to "apGameJamTemplate" folder (if you're not already there)
     - This should be achieved by entering `cd apGameJamTemplate`
 - On command line run `npm start`
-    - This script actually starts up our server (which means our game is running)
+* Run:
+    * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
+    * `npm run build` — builds minified project for production
+* Learn:
+    * `public/` dir is fully auto-generated and served by HTTP server.  Write your code in `app/` dir.
+    * Place static files you want to be copied from `app/assets/` to `public/`.
+    * [Brunch site](http://brunch.io), [Getting started guide](https://github.com/brunch/brunch-guide#readme)
+    <!-- - This script actually starts up our server (which means our game is running)
 - Open up a web browser and go to this address `http://localhost:7777`
-    - `http://127.0.0.1:7777` also works because these are representations of the "home" address
+    - `http://127.0.0.1:7777` also works because these are representations of the "home" address -->
 - From here you'll be able to play the game!
 
 ## Link to lastest stable build of game goes here:
