@@ -3,8 +3,10 @@ config.default = {};
 config.default.gameSpecs = {
     width: 375,
     height: 812,
-    renderType: Phaser.AUTO,
-    parentID : "gameContainer"
+    renderer: Phaser.AUTO,
+    parentID : "gameContainer",
+    backgroundColor: 0x000000,
+    resolution: 1
 };
 config.loadState = {
     style: {
@@ -30,12 +32,21 @@ config.menuState = {
 };
 
 
-config.default.stateManager = {
-    bootState: "boot",
-    loadState: "load",
-    menuState: "menu"
-}
-
+config.default.states = {
+    boot: {
+        src: "gameStates/boot",
+        name: "boot"
+    },
+    load: {
+        src: "gameStates/load",
+        name: "load"
+    },
+    menu: {
+        src: "gameStates/menu",
+        name: "menu",
+    }
+};
+config.default.startingState = config.default.states.boot.name;
 
 
 let isNodeJsCompatible = typeof module !== "undefined"
